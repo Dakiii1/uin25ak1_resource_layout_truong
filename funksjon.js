@@ -9,3 +9,4 @@ function navResourceList(category, index) {
 }
 resources.forEach(navResourceList)
 navHTML.innerHTML = navigateList
+
