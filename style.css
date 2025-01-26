@@ -1,0 +1,9 @@
+header {
+    color: white;
+    background-color: grey;
+    align-items: center;
+}
+body {
+    color: rgb(128, 0, 28);
+    background-color: antiquewhite;
+}
