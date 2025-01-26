@@ -1,9 +1,25 @@
-header {
-    color: white;
-    background-color: grey;
-    align-items: center;
-}
 body {
-    color: rgb(128, 0, 28);
-    background-color: antiquewhite;
+    background-color: #E1E5EE;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: darkblue;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#main {
+    display: flex;
+    height: 800px;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    background-color: white;
+    height: 200px;
+}
+
+nav {
+    background-color: #E1E5EE;
+    width: 100%;
 }
