@@ -11,6 +11,7 @@ const containerHTML = document.getElementById("paragraph")
 
  function showHTML(id) {
     containerHTML.innerHTML = ""
+
     resources.forEach(function(category, catid) {
         let background = "#2A324B"
         let text = "#fff"
@@ -18,18 +19,21 @@ const containerHTML = document.getElementById("paragraph")
             background = "#fff"
             text = "#2A324B"
         }
+
         document.getElementById(`nav${catid}`).style.backgroundColor = background
         document.getElementById(`nav${catid}span`).style.color = text
-    }
-    )
+    })
+
     containerHTML.innerHTML += `<h2>${resources[id].category}</h2>`
     containerHTML.innerHTML += `<span>${resources[id].text}</span>`
-    containerHTML.innerHTML += "<ul>"
-    resources[id].sources.forEach(function(src, srcid){
-        //fikk "sourcres til å gå lengre inn fra teksten men punktene eller prikkene fulgte ikke"
-        containerHTML.innerHTML += `<li class="sourceList"><a href="${src.url}">${src.title}</a></li>`
-    })
-    containerHTML.innerHTML += "</ul>"
+
+    let links = resources[id].sources
+        .map(src => `<li class='sourceList'><a href="${src.url}">${src.title}</a></li>`)
+        .join("");
+
+    containerHTML.innerHTML += `<ul>${links}</ul>`
+
+    
  }
 
  showHTML(0)
