@@ -26,7 +26,7 @@ const containerHTML = document.getElementById("paragraph")
     containerHTML.innerHTML += `<span>${resources[id].text}</span>`
     containerHTML.innerHTML += "<ul>"
     resources[id].sources.forEach(function(src, srcid){
-        //fikk "sourcres til å gå lengre inn fra teksten men punktene eller prikkene fulgte ikke med"
+        //fikk "sourcres til å gå lengre inn fra teksten men punktene eller prikkene fulgte ikke"
         containerHTML.innerHTML += `<li class="sourceList"><a href="${src.url}">${src.title}</a></li>`
     })
     containerHTML.innerHTML += "</ul>"
