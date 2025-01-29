@@ -1,6 +1,3 @@
- console.log(resources)
- console.log(resources[0].category)
-
  const navHTML = document.getElementById("navigate")
 
  let navigateList = ""
@@ -18,10 +15,10 @@ const containerHTML = document.getElementById("paragraph")
         let background = "#2A324B"
         let text = "#fff"
         if (id === catid) {
-            background = "#2A324B"
-            text = "#fff"
+            background = "#fff"
+            text = "#2A324B"
         }
-        document.getElementById(`nav${catid}`).style.backgroundcolor = background
+        document.getElementById(`nav${catid}`).style.backgroundColor = background
         document.getElementById(`nav${catid}span`).style.color = text
     }
     )
@@ -29,7 +26,8 @@ const containerHTML = document.getElementById("paragraph")
     containerHTML.innerHTML += `<span>${resources[id].text}</span>`
     containerHTML.innerHTML += "<ul>"
     resources[id].sources.forEach(function(src, srcid){
-        containerHTML.innerHTML += `<li><a href="${src.url}">${src.title}</a></li>`
+        //fikk "sourcres til å gå lengre inn fra teksten men punktene eller prikkene fulgte ikke med"
+        containerHTML.innerHTML += `<li class="sourceList"><a href="${src.url}">${src.title}</a></li>`
     })
     containerHTML.innerHTML += "</ul>"
  }
