@@ -28,6 +28,7 @@ const containerHTML = document.getElementById("paragraph")
     containerHTML.innerHTML += `<span>${resources[id].text}</span>`
 
     let links = resources[id].sources
+        .filter(src => src.url && src.title)
         .map(src => `<li class='sourceList'><a href="${src.url}">${src.title}</a></li>`)
         .join("");
 
